@@ -1,0 +1,56 @@
+<?php
+include "db.php";
+
+$result = mysqli_query($connection,"SELECT * FROM `films`");
+
+$films = mysqli_fetch_assoc($result);
+print_r($films);
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Кинотеатр</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Добро пожаловать в наш кинотеатр!</h1>
+  </header>
+  
+
+  <?php
+  include "db.php";
+  
+  $result = mysqli_query($connection,"SELECT * FROM `films`");
+  
+  $films = mysqli_fetch_assoc($result);
+  print_r($films);
+  ?>
+  
+
+
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="movies.html">Фильмы</a></li>
+      <li><a href="schedule.html">Расписание</a></li>
+      <li><a href="login.html">Личный кабинет</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <!-- Содержимое главной страницы -->
+  </main>
+  
+  <footer>
+    <p>Кинотеатр &copy; 2023</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
+

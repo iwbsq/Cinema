@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Кинотеатр</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Добро пожаловать в наш кинотеатр!</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="movies.html">Фильмы</a></li>
+      <li><a href="schedule.html">Расписание</a></li>
+      <li><a href="login.html">Личный кабинет</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <!-- Содержимое главной страницы -->
+  </main>
+  
+  <footer>
+    <p>Кинотеатр &copy; 2023</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<?php
+$servername = "localhost"; // Имя сервера базы данных
+$username = "username"; // Имя пользователя базы данных
+$password = ""; // Пароль пользователя базы данных
+$dbname = "o90409bc_cinema"; // Имя базы данных
+
+// Создаем подключение
+$connection = new mysqli($servername, $username, $password, $dbname);
+
+// Проверяем соединение
+if ($connection->connect_error) {
+    die("Ошибка подключения: " . $conn->connect_error);
+}
+
+// Ваш код для работы с базой данных
+
+// Закрываем соединение
+$connection->close();
+?>
